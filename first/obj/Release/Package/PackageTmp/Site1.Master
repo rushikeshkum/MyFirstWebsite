@@ -58,7 +58,7 @@
                 <div class="collapse navbar-collapse" id="mynavbar">
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="Home.aspx">Home</a>
+                            <a class="nav-link" href="Default.aspx">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="About.aspx">About</a>
@@ -69,10 +69,15 @@
                         <li class="nav-item">
                             <a class="nav-link" href="Material.aspx">Material</a>
                         </li>
+                        <li class="nav-item">
+                            <asp:Label Text="" runat="server"  />
+                            <a class="nav-link" href="#" id="lbluser"></a>
+                        </li>
                     </ul>
                     <form class="d-flex">
                         <input class="form-control me-2" type="text" placeholder="Search">
-                        <button class="btn btn-primary" type="button">Search</button>
+                        <button class="btn btn-primary" type="button" runat="server">Search </button>
+                        
                     </form>
                 </div>
             </div>
@@ -91,6 +96,8 @@
             </div>
             <div class="col-9">
                 <form id="myForm" runat="server" >
+                   
+                  
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
                 </form>
             </div>

@@ -1,18 +1,27 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="Vender.aspx.cs" Inherits="first.Vender" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+
+     <div class="" style="direction:rtl">
+    
+         <asp:Button Text="Logout" CssClass="btn btn-primary"  runat="server" OnClick="Unnamed1_Click1" />
+
+
+ </div>
     <div class="row">
         <div class="col-4 form">
 
+            <label class="form-label">Username:</label>
+            <asp:TextBox runat="server" ID="txtUser" CssClass="form-control" />
+            <br />
 
             <label class="form-label">Enter ID </label>
             <asp:TextBox runat="server" ID="txtId" CssClass="form-control" TextMode="Number" placeholder="Id" />
+             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtId" ErrorMessage="Id is requid" ForeColor="Red" SetFocusOnError="True"></asp:RequiredFieldValidator>
+ <br />
 
-            <label class="form-label">
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtId" ErrorMessage="Id is requid" ForeColor="Red" SetFocusOnError="True"></asp:RequiredFieldValidator>
-                <br />
-                Enter Name
-            </label>
+            <label class="form-label">Enter Name</label>
+
             <asp:TextBox runat="server" ID="txtName" CssClass="form-control" placeholder="Full Name" />
             <asp:RequiredFieldValidator ErrorMessage="Required Name" ControlToValidate="txtName" runat="server" SetFocusOnError="true" ForeColor="Red" /><br />
 
